@@ -19,7 +19,8 @@ from flask import Flask, render_template
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("postgresql://postgres:ADMIN@localhost:5432/postgres")
+""
+engine = create_engine("postgres://ucicakrprsnpky:0c02ab311d9965df2f4c471d98f6251dd952fb1263e3962e33a9f4c4ae7fbc78@ec2-54-158-222-248.compute-1.amazonaws.com:5432/dfkdt10l1i8e55")
 
 # reflect an existing database into a new model
 Base = automap_base()
