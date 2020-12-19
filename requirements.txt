@@ -21,12 +21,7 @@ Jinja2==2.11.2
 lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
-mkl-fft==1.2.0
-mkl-random==1.1.1
-mkl-service==2.3.0
 pandas==1.1.5
-pipenv==2020.11.15
-pipreqs==0.4.10
 psycopg2==2.8.6
 pyaml==20.4.0
 pycosat==0.6.3
