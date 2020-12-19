@@ -21,7 +21,6 @@ Jinja2==2.11.2
 lazy-object-proxy==1.4.3
 MarkupSafe==1.1.1
 mccabe==0.6.1
-menuinst==1.4.16
 mkl-fft==1.2.0
 mkl-random==1.1.1
 mkl-service==2.3.0
