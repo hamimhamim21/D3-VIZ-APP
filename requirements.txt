@@ -7,7 +7,7 @@ bs4==0.0.1
 certifi==2020.12.5
 click==7.1.2
 colorama==0.4.4
-conda==4.9.2
+conda==4.3.16
 distlib==0.3.1
 docopt==0.6.2
 filelock==3.0.12
