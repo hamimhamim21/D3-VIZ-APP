@@ -154,8 +154,9 @@ yText
 // by the Behavioral Risk Factor Surveillance System.
 
 // Import our CSV data with d3's .csv import method.
-d3.json("/test").then(function(data) {
+d3.json("http://127.0.0.1:5000/test").then(function(data) {
   // Visualize the data
+  console.log(data);
   visualize(data);
 });
 

@@ -19,7 +19,6 @@ from flask import Flask, render_template
 #################################################
 # Database Setup
 #################################################
-""
 engine = create_engine("postgres://ucicakrprsnpky:0c02ab311d9965df2f4c471d98f6251dd952fb1263e3962e33a9f4c4ae7fbc78@ec2-54-158-222-248.compute-1.amazonaws.com:5432/dfkdt10l1i8e55")
 
 # reflect an existing database into a new model
@@ -31,6 +30,7 @@ Base.prepare(engine, reflect=True)
 
 results = engine.execute("SELECT  * FROM TEST_DATA").fetchall()
 
+#Creating a list of Dictionaries
 new = []
 for i in results:
     a = {"id":i[0],"state":i[1],"abbr":i[2],"poverty":i[3],"povertyMoe":i[4],"age":i[5],"ageMoe":i[6],"income":i[7],"incomeMoe":i[8],"healthcare":i[9],"healthcareLow":i[10],"healthcareHigh":i[11],"obesity":i[12],"obesityLow":i[13],"obesityHigh":i[14],"smokes":i[15],"smokesLow":i[16],"smokesHigh":i[17]}
@@ -41,8 +41,7 @@ for i in results:
 #################################################
 app = Flask(__name__)
 
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+
 #################################################
 # Flask Routes
 #################################################
@@ -56,13 +55,8 @@ def index():
 def welcome():
     """List all available api routes."""
     
-    #response = Response(json.dumps(new[0]), mimetype='application/json')
-    #response = jsonify(results)
-     #response.headers.add("Access-Control-Allow-Origin", "*")
     return (jsonify(new))
 
 
 if __name__ == '__main__':
-    app.config['CORS_ALLOW_HEADERS'] = "Content-Type"
-    app.config['CORS_RESOURCES'] = {r"/api/*": {"origins": "*"}}
     app.run(debug=True)
