@@ -43,3 +43,4 @@ Werkzeug==1.0.1
 wincertstore==0.2
 wrapt==1.12.1
 yarg==0.1.9
+flask_sqlalchemy==2.4.1
